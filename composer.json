@@ -1,79 +1,21 @@
 {
-    "name": "nexus/monorepo",
-    "description": "Nexus - Framework-Agnostic PHP Packages for ERP Systems",
+    "name": "nexus/workflow",
+    "description": "Framework-agnostic workflow engine for Nexus ERP monorepo",
     "type": "library",
     "license": "MIT",
-    "require": {
-        "php": "^8.3",
-        "nexus/shared-kernel": "*@dev",
-        "nexus/identity": "*@dev",
-        "nexus/backoffice": "*@dev",
-        "nexus/machine-learning": "*@dev",
-        "nexus/geo": "*@dev",
-        "nexus/routing": "*@dev",
-        "nexus/inventory": "*@dev",
-        "nexus/warehouse": "*@dev",
-        "nexus/manufacturing": "*@dev",
-        "symfony/http-client": "^7.3",
-        "nyholm/psr7": "^1.8",
-        "psr/http-client": "^1.0",
-        "nexus/event-stream": "*@dev",
-        "nexus/tax": "*@dev",
-        "nexus/procurement-ml": "*@dev",
-        "nexus/tenant": "*@dev"
-    },
-    "repositories": [
+    "authors": [
         {
-            "type": "path",
-            "url": "./packages/SharedKernel",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./packages/domain/*/*",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./packages/support/*",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./packages/operations/*",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./orchestrators/*",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./adapters/*",
-            "options": {
-                "symlink": true
-            }
+            "name": "Nexus Development Team"
         }
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "config": {
-        "allow-plugins": {
-            "php-http/discovery": true
+    "require": {
+        "php": "^8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nexus\\Workflow\\": "src/"
         }
     },
-    "require-dev": {
-        "phpunit/phpunit": "^11.0"
-    }
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
